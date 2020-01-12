@@ -36,48 +36,26 @@
 
         <fieldset class="form-group">
             <legend>Cupcake Flavors</legend>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="grasshopper" id="grasshopper" name="cupcakes[]">
-                <label class="form-check-label" for="grasshopper">
-                    The Grasshopper
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="wisky-maple-bacon" id="wisky-maple-bacon" name="cupcakes[]">
-                <label class="form-check-label" for="wisky-maple-bacon">
-                    Wiskey Maple Bacon
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="carrot-walnut" id="carrot-walnut" name="cupcakes[]">
-                <label class="form-check-label" for="carrot-walnut">
-                    Carrot Walnut
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="salted-caramel" id="salted-caramel" name="cupcakes[]">
-                <label class="form-check-label" for="salted-caramel">
-                    Salted Caramel Cupcake
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="woims" id="worms" name="cupcakes[]">
-                <label class="form-check-label" for="redvelvet">
-                    Red Velvet
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="lemondrop" id="lemondrop" name="cupcakes[]">
-                <label class="form-check-label" for="lemondrop">
-                    Lemon Drop
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="tiramisu" id="tiramisu" name="cupcakes[]">
-                <label class="form-check-label" for="tiramisu">
-                    Tiramisu
-                </label>
-            </div>
+            <?php
+            $cupcakes = array(
+                "grasshopper"=>"The Grasshopper",
+                "maple"=>"Whiskey Maple Bacon",
+                "carrot"=>"Carrot Walnut",
+                "caramel"=>"Salted Caramel Cupcake",
+                "velvet"=>"Red Velvet",
+                "lemon"=>"Lemon Drop",
+                "tiramisu"=>"Tiramisu",
+            );
+
+            foreach($cupcakes as $key=>$value) {
+                echo "  <div class=\"form-check\">
+                            <input class=\"form-check-input\" type=\"checkbox\" value=$key id=$key name=\"cupcakes[]\">
+                            <label class=\"form-check-label\" for=$key>
+                                $value
+                            </label>
+                        </div>";
+            }
+            ?>
         </fieldset>
 
         <button id="submit" type="submit" class="btn btn-success">
