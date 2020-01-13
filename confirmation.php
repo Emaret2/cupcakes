@@ -21,6 +21,7 @@ require("cupcakes.php");
         $err_noName = true;
         $invalid = true;
     }
+
     if(isset($_POST['cupcakes'])){
         $cupcakes = $_POST['cupcakes'];
         foreach($cupcakes as $key => $value){

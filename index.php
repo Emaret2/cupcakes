@@ -51,6 +51,7 @@
             require("cupcakes.php");
 
             foreach($masterCupcakes as $key=>$value) {
+
                 echo "  <div class=\"form-check\">
                             <input class=\"form-check-input\" type=\"checkbox\" value=$key id=$key name=\"cupcakes[]\">
                             <label class=\"form-check-label\" for=$key>
