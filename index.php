@@ -37,17 +37,9 @@
         <fieldset class="form-group">
             <legend>Cupcake Flavors</legend>
             <?php
-            $cupcakes = array(
-                "grasshopper"=>"The Grasshopper",
-                "maple"=>"Whiskey Maple Bacon",
-                "carrot"=>"Carrot Walnut",
-                "caramel"=>"Salted Caramel Cupcake",
-                "velvet"=>"Red Velvet",
-                "lemon"=>"Lemon Drop",
-                "tiramisu"=>"Tiramisu",
-            );
+            require("cupcakes.php");
 
-            foreach($cupcakes as $key=>$value) {
+            foreach($masterCupcakes as $key=>$value) {
                 echo "  <div class=\"form-check\">
                             <input class=\"form-check-input\" type=\"checkbox\" value=$key id=$key name=\"cupcakes[]\">
                             <label class=\"form-check-label\" for=$key>
