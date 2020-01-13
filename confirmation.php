@@ -11,12 +11,16 @@ require("cupcakes.php");
 </head>
 <body>
 <?php
-
+    //var_dump($_POST);
     // check for errors
     $invalid = false;
 
     if(isset($_POST['name'])){
         $name = $_POST['name'];
+        if ($name == ""){
+            $err_noName = true;
+            $invalid = true;
+        }
     } else {
         $err_noName = true;
         $invalid = true;
